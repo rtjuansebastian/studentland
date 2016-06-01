@@ -1,0 +1,204 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head> 
+   <title>StudentLand</title> 
+   <meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-1" />
+   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
+   <link rel="stylesheet" href="css/style2.css" />
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+   <script type="text/javascript" src="js/handler.js"></script>
+
+</head> 
+
+<body> 
+	<div data-role="page" id="principal"> 
+		<div data-role="header" data-position="fixed" data-theme="a">
+		<h1>StudentLand</h1>
+		</div> 
+		<div data-role="content">
+		<!--<form action="php/consultar.php" id="formulario" method="POST">-->
+		<form action="http://gincomex.com/siacomex/studentland/consultar.php" id="formulario" method="POST">
+			<div data-role="fieldcontain">
+			<label for="select_tc" class="select">Tipo de carrera:</label>
+			<select name="select_tipo_carrera" id="select_tipo_carrera" data-theme="a">
+				<option value="0">Cualquiera</option>
+				<option value="1">Tecnica profesional</option>
+				<option value="2">Tecnologica</option>
+				<option value="3">Profesional</option>
+				<option value="4">Especialización</option>
+				<option value="5">Maestría</option>
+				<option value="6">Doctorado</option>
+			</select>
+			</div><!-- /fieldcontain -->
+			<div data-role="fieldcontain">
+			<label for="select_ti" class="select" >Tipo de Insitucion:</label>
+			<select name="select_tipo_institucion" id="select_tipo_institucion" data-theme="a">
+				<option value="0">Cualquiera</option>
+				<option value="1">Publica</option>
+				<option value="2">Privada</option>
+			</select>
+			</div><!-- /fieldcontain -->
+			<div data-role="fieldcontain">
+				<label for="select_programa" class="select">Seleccione un programa:</label>
+				<select name="select_programa" id="select_programa" data-theme="a">
+					<option value="0">Cualquiera</option>
+					<option value="34">Administracion</option>
+					<option value="1">Agronomia</option>
+					<option value="22">Antropologia, artes liberales</option>
+					<option value="37">Arquitectura</option>
+					<option value="4">Artes plasticas, visuales y afines</option>
+					<option value="7">Artes representativas</option>
+					<option value="13">Bacteriologia</option>
+					<option value="29">Bibliotecologia, otros de ciencias sociales y humanas</option>
+					<option value="53">Biologia, microbiologia y afines</option>
+					<option value="33">Ciencia politica, relaciones internacionales</option>
+					<option value="30">Comunicaci&oacuten social, periodismo y afines</option>
+					<option value="35">Contaduria publica</option>
+					<option value="31">Deportes, educacion fisica y recreacion</option>
+					<option value="32">Derecho y afines</option>
+					<option value="9">Dise&ntildeo</option>
+					<option value="36">Economia</option>
+					<option value="12">Licenciaturas y educaci&oacuten</option>
+					<option value="18">Enfermeria</option>
+					<option value="25">Filosofia, teologia y afines</option>
+					<option value="54">Fisica</option>
+					<option value="28">Formacion relacionada con el campo militar o policial</option>
+					<option value="23">Geografia, historia</option>
+					<option value="55">Geologia, otros programas de ciencias naturales</option>
+					<option value="52">Ingenieria admnistrativa y afines</option>
+					<option value="51">Ingenieria agricola, forestal y afines</option>
+					<option value="48">Ingenieria agroindustrial, alimentos y afines</option>
+					<option value="38">Ingenieria agronomica, pecuaria y afines</option>
+					<option value="50">Ingenieria ambiental, sanitaria y afines</option>
+					<option value="49">Ingenieria biomedica y afines</option>
+					<option value="47">Ingenieria civil y afines</option>
+					<option value="39">Ingenieria de minas, metalurgia y afines</option>
+					<option value="46">Ingenieria de sistemas, telematica y afines</option>
+					<option value="45">Ingenieria electrica y afines</option>
+					<option value="44">Ingenieria electronica, telecomunicaciones y afin</option>
+					<option value="43">Ingenieria industrial y afines</option>
+					<option value="42">Ingenieria mecanica y afines</option>
+					<option value="41">Ingenieria quimica y afines</option>
+					<option value="21">Instrumentacion quirurgica</option>
+					<option value="27">Lenguas modernas, literatura, linguistica y afines</option>
+					<option value="57">Matematicas, estadistica y afines</option>
+					<option value="20">Medicina</option>
+					<option value="3">Medicina veterinaria</option>
+					<option value="6">Musica</option>
+					<option value="17">Nutricion y dietetica</option>
+					<option value="14">Odontologia</option>
+					<option value="16">Optometria, otros programas de ciencias de la salud</option>
+					<option value="40">Otras ingenierias</option>
+					<option value="5">Otros programas asociados a bellas artes</option>
+					<option value="26">Psicologia</option>
+					<option value="8">Publicidad y afines</option>
+					<option value="56">Quimica y afines</option>
+					<option value="15">Salud publica</option>
+					<option value="24">Sociologia, trabajo social y afine</option>
+					<option value="19">Terapias</option>
+					<option value="2">Zootecnia</option>
+				</select>
+			</div><!-- /fieldcontain -->
+			<div data-role="fieldcontain">
+				<label for="select_ciudad" class="select">Seleccione un departamento:</label>
+	            <select name="select_ciudad" id="select_ciudad" data-theme="a">
+	            	<option value="0">Cualquiera</option>
+	            	<option value="33">Bogotá D.C</option>
+	            	<option value="1">Amazonas</option>
+	            	<option value="2">Antioquia</option>
+	            	<option value="3">Arauca</option>
+	            	<option value="4">Atlántico</option>
+	            	<option value="5">Bolívar</option>
+	            	<option value="6">Boyacá</option>
+	            	<option value="7">Caldas</option>
+	            	<option value="8">Caquetá</option>
+	            	<option value="9">Casanare</option>
+	            	<option value="10">Cauca</option>
+	            	<option value="11">Cesar</option>
+	            	<option value="12">Chocó</option>
+	            	<option value="13">Córdoba</option>
+	            	<option value="14">Cundinamarca</option>
+	            	<option value="15">Guainía</option>
+	            	<option value="16">Guajira</option>
+	            	<option value="17">Guaviare</option>
+	            	<option value="18">Huila</option>
+	            	<option value="19">Magdalena</option>
+	            	<option value="20">Meta</option>
+	            	<option value="21">Nariño</option>
+	            	<option value="22">Norte de Santander</option>
+	            	<option value="23">Putumayo</option>
+	            	<option value="24">Quindío</option>
+	            	<option value="25">Risaralda</option>
+	            	<option value="26">San Andrés y Providencia</option>
+	            	<option value="27">Santander</option>
+	            	<option value="28">Sucre</option>
+	            	<option value="29">Tolima</option>
+	            	<option value="30">Valle del Cauca</option>
+	            	<option value="31">Vaupés</option>
+	            	<option value="32">Vichada</option>   	
+	            </select>
+			</div><!-- /fieldcontain -->
+			<div align="center">
+			<input type="button" data-theme="a" name="submit" id="btsubmit" value="consultar" data-iconpos="notext" data-icon="arrow-r" onclick="location.href='#mostrar'">
+			</div>>
+		</form>
+		</div> <!-- /content -->
+		<div data-role="footer" data-position="fixed" data-theme="a">		
+			<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="back" >Atras</a></li>
+				<li><a href="#" data-icon="home">Inicio</a></li>
+				<li><a href="#" data-icon="gear">Ajustes</a></li>
+			</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div> <!-- /page -->
+	<div data-role="page" id="mostrar"> 
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>StudentLand</h1>
+		</div> 
+		<div data-role="content">
+			<div class="ui-field-contain">
+				<div id="mostrarDatos">
+					<div id="total"></div>
+					<ul data-role="listview" data-theme="a" id="listaDatos" data-filter="true" data-filter-placeholder="Filtro de búsqueda">
+					</ul>
+				</div>
+			</div>>	
+		</div> <!-- /content -->
+		<div data-role="footer" data-position="fixed" data-theme="a">		
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#principal" data-icon="back">Atras</a></li></li>
+				<li><a href="#principal" data-icon="home">Inicio</a></li>
+				<li><a href="#" data-icon="gear">Ajustes</a></li>
+			</ul>
+		</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div> <!-- /page -->
+	<div data-role="page" id="resultado"> 
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>StudentLand</h1>
+		</div> 
+		<div data-role="content">
+			<div class="ui-field-contain">
+				<div id=mostrarDatosPrograma>
+					<ul data-role="listview" data-theme="a" id="listaDatosPrograma">
+					</ul>
+				</div><!-- /mostrar datos programa -->
+			</div><!-- /field contain -->	
+		</div> <!-- /content -->
+		<div data-role="footer" data-position="fixed" data-theme="a">		
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#mostrar" data-icon="back">Atras</a></li></li>
+				<li><a href="#principal" data-icon="home">Inicio</a></li>
+				<li><a href="#" data-icon="gear">Ajustes</a></li>
+			</ul>
+		</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div> <!-- /page -->
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head> 
+   <title>StudentLand</title> 
+   <meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-1" />
+   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
+   <link rel="stylesheet" href="css/student.css" />
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+   <script type="text/javascript" src="js/handler.js"></script>
+</head> 
+
+<body> 
+	<div data-role="page" id="principal"> 
+		<div data-role="header" data-position="fixed" data-theme="a">
+		<h1>StudentLand</h1>
+		</div> 
+		<div data-role="content">
+		<form action="php/consultar.php" id="formulario" method="POST">
+			<div data-role="fieldcontain">
+			<label for="select_tc" class="select">Tipo de carrera:</label>
+			<select name="select_tipo_carrera" id="select_tipo_carrera" data-theme="a">
+				<option value="Cualquiera">Cualquiera</option>
+				<option value="Tecnica">Tecnica</option>
+				<option value="Profesional">Profesional</option>
+				<option value="Posgrado">Posgrado</option>
+			</select>
+			</div><!-- /fieldcontain -->
+			<div data-role="fieldcontain">
+			<label for="select_ti" class="select" >Tipo de Insitucion:</label>
+			<select name="select_tipo_institucion" id="select_tipo_institucion" data-theme="a">
+				<option value="Cualquiera">Cualquiera</option>
+				<option value="Publica">Publica</option>
+				<option value="Privada">Privada</option>
+			</select>
+			</div><!-- /fieldcontain -->
+			<div data-role="fieldcontain">
+				<label for="select_programa" class="select">Seleccione un programa:</label>
+				<select name="select_programa" id="select_programa" data-theme="a">
+					<option value="Cualquiera">Cualquiera</option>
+					<option value="34">Administracion</option>
+					<option value="1">Agronomia</option>
+					<option value="22">Antropologia, artes liberales</option>
+					<option value="37">Arquitectura</option>
+					<option value="4">Artes plasticas, visuales y afines</option>
+					<option value="7">Artes representativas</option>
+					<option value="13">Bacteriologia</option>
+					<option value="29">Bibliotecologia, otros de ciencias sociales y humanas</option>
+					<option value="53">Biologia, microbiologia y afines</option>
+					<option value="33">Ciencia politica, relaciones internacionales</option>
+					<option value="30">Comunicaci&oacuten social, periodismo y afines</option>
+					<option value="35">Contaduria publica</option>
+					<option value="31">Deportes, educacion fisica y recreacion</option>
+					<option value="32">Derecho y afines</option>
+					<option value="9">Dise&ntildeo</option>
+					<option value="36">Economia</option>
+					<option value="12">Licenciaturas y educaci&oacuten</option>
+					<option value="18">Enfermeria</option>
+					<option value="25">Filosofia, teologia y afines</option>
+					<option value="54">Fisica</option>
+					<option value="28">Formacion relacionada con el campo militar o policial</option>
+					<option value="23">Geografia, historia</option>
+					<option value="55">Geologia, otros programas de ciencias naturales</option>
+					<option value="52">Ingenieria admnistrativa y afines</option>
+					<option value="51">Ingenieria agricola, forestal y afines</option>
+					<option value="48">Ingenieria agroindustrial, alimentos y afines</option>
+					<option value="38">Ingenieria agronomica, pecuaria y afines</option>
+					<option value="50">Ingenieria ambiental, sanitaria y afines</option>
+					<option value="49">Ingenieria biomedica y afines</option>
+					<option value="47">Ingenieria civil y afines</option>
+					<option value="39">Ingenieria de minas, metalurgia y afines</option>
+					<option value="46">Ingenieria de sistemas, telematica y afines</option>
+					<option value="45">Ingenieria electrica y afines</option>
+					<option value="44">Ingenieria electronica, telecomunicaciones y afin</option>
+					<option value="43">Ingenieria industrial y afines</option>
+					<option value="42">Ingenieria mecanica y afines</option>
+					<option value="41">Ingenieria quimica y afines</option>
+					<option value="21">Instrumentacion quirurgica</option>
+					<option value="27">Lenguas modernas, literatura, linguistica y afines</option>
+					<option value="57">Matematicas, estadistica y afines</option>
+					<option value="20">Medicina</option>
+					<option value="3">Medicina veterinaria</option>
+					<option value="6">Musica</option>
+					<option value="17">Nutricion y dietetica</option>
+					<option value="14">Odontologia</option>
+					<option value="16">Optometria, otros programas de ciencias de la salud</option>
+					<option value="40">Otras ingenierias</option>
+					<option value="5">Otros programas asociados a bellas artes</option>
+					<option value="26">Psicologia</option>
+					<option value="8">Publicidad y afines</option>
+					<option value="56">Quimica y afines</option>
+					<option value="15">Salud publica</option>
+					<option value="24">Sociologia, trabajo social y afine</option>
+					<option value="19">Terapias</option>
+					<option value="2">Zootecnia</option>
+				</select>
+			</div><!-- /fieldcontain -->
+			<div data-role="fieldcontain">
+				<label for="select_ciudad" class="select">Seleccione una ciudad:</label>
+	            <select name="select_ciudad" id="select_ciudad" data-theme="a">
+	            	<option value="Cualquiera">Cualquiera</option>
+	            	<option value="1">Apartad&oacute</option>
+	            	<option value="2">Arauca</option>
+	            	<option value="3">Armenia</option>
+	            	<option value="4">Barbosa</option>
+	            	<option value="5">Barrancabermeja</option>
+	            	<option value="6">Barranquilla</option>
+	            	<option value="7">Bello</option>
+	            	<option value="8">Bogot&aacute</option>
+	            	<option value="9">Bucaramanga</option>
+	            	<option value="10">Buenaventura</option>
+	            	<option value="11">Buga</option>
+	            	<option value="12">Cucuta</option>
+	            	<option value="13">Cali</option>
+	            	<option value="14">Cartagena</option>
+	            	<option value="15">Cartago</option>
+	            	<option value="16">Circasia</option>
+	            	<option value="17">Duitama</option>
+	            	<option value="18">El espinal</option>
+	            	<option value="19">Girardot</option>
+	            	<option value="20">Ibague</option>
+	            	<option value="21">Leticia</option>
+	            	<option value="22">Malaga</option>
+	            	<option value="23">Manizales</option>
+	            	<option value="24">Medellin</option>
+	            	<option value="25">Monteria</option>
+	            	<option value="26">Neiva</option>
+	            	<option value="27">Palmira</option>
+	            	<option value="28">Pasto</option>
+	            	<option value="29">Pereira</option>
+	            	<option value="30">Popayan</option>
+	            	<option value="31">Puerto Colombia</option>
+	            	<option value="32">Quibdo</option>
+	            	<option value="33">Riohacha</option>
+	            	<option value="34">Rionegro</option>
+	            	<option value="35">Roldanillo</option>
+	            	<option value="36">Santa Marta</option>
+	            	<option value="37">Sincelejo</option>
+	            	<option value="38">Socorro</option>
+	            	<option value="39">Tunja</option>
+	            	<option value="40">Valledupar</option>
+	            	<option value="41">Villavicencio</option>
+	            	<option value="42">Pamplona</option>
+	            	<option value="43">Florencia</option>
+	            	<option value="44">Fusagasuga</option>
+	            	<option value="45">Caucasia</option>
+	            	<option value="46">Puerto Berrio</option>
+	            	<option value="47">Segovia</option>
+	            	<option value="48">Yarumal</option>
+	            	<option value="49">El Carmen de Viboral</option>
+	            	<option value="50">Andes</option>
+	            	<option value="51">Santa Fe de Antioquia</option>
+	            	<option value="52">Piedecuesta</option>
+	            	<option value="53">San Andres</option>
+	            	<option value="54">Tumaco</option>
+	            	<option value="55">Guapi</option>
+	            	<option value="56">Puerto Asis</option>
+	            	<option value="57">La chorrera</option>
+	            	<option value="58">Sutatenza</option>
+	            	<option value="59">Sogamoso</option>
+	            	<option value="60">Chiquinquira</option>
+	            	<option value="61">Yopal</option>
+	            	<option value="62">Oca&ntildea</option>
+	            	<option value="63">Sop&oacute</option>
+	            	<option value="64">Villa del Rosario</option>
+	            	<option value="65">Chia</option>
+	            	<option value="66">Garzon</option>
+	            	<option value="67">La Plata</option>
+	            	<option value="68">Pitalito</option>
+	            	<option value="69">Aguachica</option>
+	            	<option value="70">Agust&iacuten Codazzi</option>
+	            	<option value="71">Cajica</option>
+	            	<option value="72">Floridablanca</option>
+	            	<option value="73">Envigado</option>
+	            	<option value="74">Dosquebradas</option>
+	            	<option value="75">Ubat&eacute</option>
+	            	<option value="76">Chocont&aacute</option>
+	            	<option value="77">Facatativ&aacute</option>
+	            	<option value="78">Soacha</option>
+	            	<option value="79">Zipaquir&aacute</option>
+	            	<option value="80">Turbo</option>
+	            	<option value="81">Madrid</option>	            	
+	            </select>
+			</div><!-- /fieldcontain -->
+			<input type="button" data-theme="b" name="submit" id="btsubmit" value="consultar" data-icon="arrow-r" onclick="location.href='#mostrar'">
+
+		</form>
+		</div> <!-- /content -->
+		<div data-role="footer" data-position="fixed" data-theme="a">		
+			<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="back" >Atras</a></li>
+				<li><a href="#" data-icon="home">Inicio</a></li>
+				<li><a href="#" data-icon="gear">Ajustes</a></li>
+			</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div> <!-- /page -->
+	<div data-role="page" id="mostrar"> 
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<h1>StudentLand</h1>
+	</div> 
+	<div data-role="content">
+			<div id="mostrarDatos">
+				<ul data-role="listview" data-theme="a" id="listaDatos">
+				</ul>
+			</div>
+	</div> <!-- /content -->
+	<div data-role="footer" data-position="fixed" data-theme="a">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#principal" data-icon="back" >Atras</a></li></li>
+			<li><a href="#principal" data-icon="home">Inicio</a></li>
+			<li><a href="#" data-icon="gear">Ajustes</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div><!-- /footer -->
+	</div> <!-- /page -->
+</body>
+</html>
