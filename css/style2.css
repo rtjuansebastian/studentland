@@ -13,6 +13,11 @@
 /* Globals */
 /* Font
 -----------------------------------------------------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+*{
+    font-family: 'Bangers', cursive;
+}
+
 html {
 	font-size: 100%;
 }
