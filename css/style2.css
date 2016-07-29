@@ -13,7 +13,10 @@
 /* Globals */
 /* Font
 -----------------------------------------------------------------------------------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=Bangers);
+@font-face {
+font-family: bangers;
+src: url(bangers.ttf);
+}
 *{
     font-family: 'Bangers', cursive;
 }
