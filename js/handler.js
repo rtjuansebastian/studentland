@@ -2,7 +2,7 @@ $(document).on("ready",ini);
 
 function ini()
 {	
-	$("#btsubmit").on("click",consultarEstudiantes);   
+	$("#btsubmit").on("click",consultarEstudiantes);
 }
 
 function consultarEstudiantes()

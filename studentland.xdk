@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.webapp",
       "src": "",
       "projectGuid": "27681910-0f46-4e62-91ad-d3d3f4f79bc6",
-      "lastModifiedDate": 1459540553035,
+      "lastModifiedDate": 1469833024226,
       "creationDate": 1459540088590
     },
     "sourceDirectory": "",
@@ -96,7 +96,8 @@
         "certificateId_": "",
         "appVersion_": "0.0.1",
         "cordovaCLIVersion_": "5.4.1",
-        "iosProvs_": []
+        "iosProvs_": [],
+        "appVersionCode_": ""
       },
       "Windows8": {
         "platform_": "windows8",

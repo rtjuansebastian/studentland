@@ -1,15 +1,43 @@
 <!DOCTYPE html> 
 <html lang="es">
 <head> 
-   <title>StudentLand</title> 
-   <meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-1" />
-   <meta name="viewport" content="width=device-width, initial-scale=1">  
-   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
-   <link rel="stylesheet" href="css/style2.css" />
-   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-   <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
-   <script type="text/javascript" src="js/handler.js"></script>
-
+    <title>Estudiayapp</title> 
+    <meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/handler.js"></script>
+    <script>
+$('#formulariologin').submit(function() { 
+	
+	 
+	// recolecta los valores que inserto el usuario
+	var datosUsuario = $("#nombredeusuario").val()
+	var datosPassword = $("#clave").val()
+	
+  	archivoValidacion = "http://gincomex.com/siacomex/studentland/login.php?jsoncallback=?"
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
+	.done(function(respuestaServer) {
+		
+		alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador)
+		
+		if(respuestaServer.validacion == "ok"){
+		  
+		 	/// si la validacion es correcta, muestra la pantalla "home"
+			$.mobile.changePage("#menu")
+		  
+		}else{
+		  
+		  /// ejecutar una conducta cuando la validacion falla
+		}
+  
+	})
+	return false;
+})
+	
+</script>
 </head> 
 
 <body> 
@@ -17,23 +45,23 @@
 		<div data-role="header" data-position="fixed" data-theme="a">
 		<h1>Estudiayapp</h1>
 		</div> 
-		<div data-role="content">
+		<div role="main" class="ui-content">
 		<!--<form action="php/consultar.php" id="formulario" method="POST">-->
 		<form action="http://gincomex.com/siacomex/studentland/consultar.php" id="formulario" method="POST">
 			<div data-role="fieldcontain">
-			<label for="select_tc" class="select">Tipo de carrera:</label>
+			<label for="select_tipo_carrera" class="select">Tipo de carrera:</label>
 			<select name="select_tipo_carrera" id="select_tipo_carrera" data-theme="a">
 				<option value="0">Cualquiera</option>
 				<option value="1">Tecnica profesional</option>
 				<option value="2">Tecnologica</option>
 				<option value="3">Profesional</option>
-				<option value="4">Especialización</option>
-				<option value="5">Maestría</option>
+				<option value="4">Especializaci�n</option>
+				<option value="5">Maestr�a</option>
 				<option value="6">Doctorado</option>
 			</select>
 			</div><!-- /fieldcontain -->
 			<div data-role="fieldcontain">
-			<label for="select_ti" class="select" >Tipo de Insitucion:</label>
+			<label for="select_tipo_institucion" class="select" >Tipo de Insitucion:</label>
 			<select name="select_tipo_institucion" id="select_tipo_institucion" data-theme="a">
 				<option value="0">Cualquiera</option>
 				<option value="1">Publica</option>
@@ -102,43 +130,43 @@
 				</select>
 			</div><!-- /fieldcontain -->
 			<div data-role="fieldcontain">
-				<label for="select_ciudad" class="select">Seleccione un departamento:</label>
-	            <select name="select_ciudad" id="select_ciudad" data-theme="a">
-	            	<option value="0">Cualquiera</option>
-	            	<option value="33">Bogotá D.C</option>
-	            	<option value="1">Amazonas</option>
-	            	<option value="2">Antioquia</option>
-	            	<option value="3">Arauca</option>
-	            	<option value="4">Atlántico</option>
-	            	<option value="5">Bolívar</option>
-	            	<option value="6">Boyacá</option>
-	            	<option value="7">Caldas</option>
-	            	<option value="8">Caquetá</option>
-	            	<option value="9">Casanare</option>
-	            	<option value="10">Cauca</option>
-	            	<option value="11">Cesar</option>
-	            	<option value="12">Chocó</option>
-	            	<option value="13">Córdoba</option>
-	            	<option value="14">Cundinamarca</option>
-	            	<option value="15">Guainía</option>
-	            	<option value="16">Guajira</option>
-	            	<option value="17">Guaviare</option>
-	            	<option value="18">Huila</option>
-	            	<option value="19">Magdalena</option>
-	            	<option value="20">Meta</option>
-	            	<option value="21">Nariño</option>
-	            	<option value="22">Norte de Santander</option>
-	            	<option value="23">Putumayo</option>
-	            	<option value="24">Quindío</option>
-	            	<option value="25">Risaralda</option>
-	            	<option value="26">San Andrés y Providencia</option>
-	            	<option value="27">Santander</option>
-	            	<option value="28">Sucre</option>
-	            	<option value="29">Tolima</option>
-	            	<option value="30">Valle del Cauca</option>
-	            	<option value="31">Vaupés</option>
-	            	<option value="32">Vichada</option>   	
-	            </select>
+                            <label for="select_ciudad" class="select">Seleccione un departamento:</label>
+                            <select name="select_ciudad" id="select_ciudad" data-theme="a">
+                                <option value="0">Cualquiera</option>
+                                <option value="33">Bogot� D.C</option>
+                                <option value="1">Amazonas</option>
+                                <option value="2">Antioquia</option>
+                                <option value="3">Arauca</option>
+                                <option value="4">Atl�ntico</option>
+                                <option value="5">Bol�var</option>
+                                <option value="6">Boyac�</option>
+                                <option value="7">Caldas</option>
+                                <option value="8">Caquet�</option>
+                                <option value="9">Casanare</option>
+                                <option value="10">Cauca</option>
+                                <option value="11">Cesar</option>
+                                <option value="12">Choc�</option>
+                                <option value="13">C�rdoba</option>
+                                <option value="14">Cundinamarca</option>
+                                <option value="15">Guain�a</option>
+                                <option value="16">Guajira</option>
+                                <option value="17">Guaviare</option>
+                                <option value="18">Huila</option>
+                                <option value="19">Magdalena</option>
+                                <option value="20">Meta</option>
+                                <option value="21">Nari�o</option>
+                                <option value="22">Norte de Santander</option>
+                                <option value="23">Putumayo</option>
+                                <option value="24">Quind�o</option>
+                                <option value="25">Risaralda</option>
+                                <option value="26">San Andr�s y Providencia</option>
+                                <option value="27">Santander</option>
+                                <option value="28">Sucre</option>
+                                <option value="29">Tolima</option>
+                                <option value="30">Valle del Cauca</option>
+                                <option value="31">Vaup�s</option>
+                                <option value="32">Vichada</option>   	
+                            </select>
 			</div><!-- /fieldcontain -->
 			<div align="center">
 			<input type="button" data-theme="a" name="submit" id="btsubmit" value="consultar" data-iconpos="notext" data-icon="arrow-r" onclick="location.href='#mostrar'">
@@ -150,20 +178,20 @@
 			<ul>
 				<li><a href="#" data-icon="back" >Atras</a></li>
 				<li><a href="#" data-icon="home">Inicio</a></li>
-				<li><a href="#" data-icon="gear">Ajustes</a></li>
+				<li><a href="#menu" data-icon="gear">Ajustes</a></li>
 			</ul>
 			</div><!-- /navbar -->
 		</div><!-- /footer -->
 	</div> <!-- /page -->
 	<div data-role="page" id="mostrar"> 
 		<div data-role="header" data-position="fixed" data-theme="a">
-			<h1>StudentLand</h1>
+			<h1>Estudiayapp</h1>
 		</div> 
-		<div data-role="content">
+		<div role="main" class="ui-content">
 			<div class="ui-field-contain">
 				<div id="mostrarDatos">
 					<div id="total"></div>
-					<ul data-role="listview" data-theme="a" id="listaDatos" data-filter="true" data-filter-placeholder="Filtro de búsqueda">
+					<ul data-role="listview" data-theme="a" id="listaDatos" data-filter="true" data-filter-placeholder="Filtro de b�squeda">
 					</ul>
 				</div>
 			</div>	
@@ -173,16 +201,16 @@
 			<ul>
 				<li><a href="#principal" data-icon="back">Atras</a></li>
 				<li><a href="#principal" data-icon="home">Inicio</a></li>
-				<li><a href="#" data-icon="gear">Ajustes</a></li>
+				<li><a href="#menu" data-icon="gear">Ajustes</a></li>
 			</ul>
 		</div><!-- /navbar -->
 		</div><!-- /footer -->
 	</div> <!-- /page -->
 	<div data-role="page" id="resultado"> 
 		<div data-role="header" data-position="fixed" data-theme="a">
-			<h1>StudentLand</h1>
+			<h1>Estudiayapp</h1>
 		</div> 
-		<div data-role="content">
+		<div role="main" class="ui-content">
 			<div class="ui-field-contain">
 				<div id=mostrarDatosPrograma>
 					<ul data-role="listview" data-theme="a" id="listaDatosPrograma">
@@ -195,10 +223,188 @@
 			<ul>
 				<li><a href="#mostrar" data-icon="back">Atras</a></li>
 				<li><a href="#principal" data-icon="home">Inicio</a></li>
-				<li><a href="#" data-icon="gear">Ajustes</a></li>
+				<li><a href="#menu" data-icon="gear">Ajustes</a></li>
 			</ul>
 		</div><!-- /navbar -->
 		</div><!-- /footer -->
 	</div> <!-- /page -->
+	<div data-role="page" id="menu"> 
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Estudiayapp</h1>
+		</div> 
+		<div role="main" class="ui-content">
+                    <div data-role="controlgroup">
+                        <a href="#principal" class="ui-btn ui-corner-all ui-icon-search ui-btn-icon-bottom">Buscar Carrera</a>
+                        <a href="#login" class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-bottom">Iniciar Sesion/Registrar</a>
+                        <a href="#test_vocacional" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-bottom">Test Vocacional</a>
+                        <a href="#" class="ui-btn ui-corner-all ui-icon-star ui-btn-icon-bottom">Ranking</a>
+                    </div>    
+		</div> <!-- /content -->
+		<div data-role="footer" data-position="fixed" data-theme="a">		
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#principal" data-icon="back">Atras</a></li>
+				<li><a href="#principal" data-icon="home">Inicio</a></li>
+				<li><a href="#menu" data-icon="gear">Ajustes</a></li>
+			</ul>
+		</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div> <!-- /page -->
+	<div data-role="page" id="login"> 
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Estudiayapp</h1>
+		</div> 
+		<div role="main" class="ui-content">
+                    <!--<form action="http://gincomex.com/siacomex/studentland/login.php" id="formulario" method="POST">-->
+		<form id="formulariologin" >
+      
+      			<label> Usuario </label>
+      			<input type="text" id="nombredeusuario" name="nombredeusuario">
+      
+      			<label> Password </label>
+     			<input type="password" id="clave" name="clave" >
+
+      			<input type="submit" value="Login" id="botonLogin">
+      
+                </form> 
+		</div> <!-- /content -->
+		<div data-role="footer" data-position="fixed" data-theme="a">		
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#principal" data-icon="back">Atras</a></li>
+				<li><a href="#principal" data-icon="home">Inicio</a></li>
+				<li><a href="#menu" data-icon="gear">Ajustes</a></li>
+			</ul>
+		</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div> <!-- /page -->           
+	<div data-role="page" id="test_vocacional"> 
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Estudiayapp</h1>
+		</div> 
+		<div role="main" class="ui-content">
+                    <table data-role="table" id="table-test-1" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" >
+                        <thead>
+                            <tr class="ui-bar-d">
+                                <th>#</th>
+                                <th>Pregunta</th>
+                                <th>Respuesta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>�Aceptarias trabajar escribiendo articulos en la seccion economica de un diario?</td>
+                                <td>
+                                    <select name="slider1" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Yes</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>�Te ofrecerias para organizar la despedida de soltero de uno de tus amigos?</td>
+                                <td>
+                                    <select name="slider2" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Yes</option>
+                                    </select>                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>�Te gustaria dirigir un proyecto de urbanizacion en tu municipio?</td>
+                                <td>
+                                    <select name="slider3" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Yes</option>
+                                    </select>                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>�A una frustracion siempre opones un pensamiento positivo?</td>
+                                <td>
+                                    <select name="slider4" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Yes</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>�Te dedicarias a socorrer a personas accidentadas o atacadas por asaltantes?</td>
+                                <td>
+                                    <select name="slider5" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Yes</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td>�Cuando eras chico, te interesaba saber como estaban construidos tus juguetes?</td>
+                                <td>
+                                    <select name="slider6" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Yes</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td>�Te interesan mas los misterios de la naturaleza que los secretos de la tecnologia?</td>
+                                <td>
+                                    <select name="slider7" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Yes</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td>�Escuchas atentamente los problemas que te plantean tus amigos?</td>
+                                <td>
+                                    <select name="slider8" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Yes</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <td>�Te ofrecerias para explicar a tus compa�eros un determinado tema que ellos no
+entendieron?</td>
+                                <td>
+                                    <select name="slider9" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Yes</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td>�Eres exigente y critico con tu equipo de trabajo?</td>
+                                <td>
+                                    <select name="slider10" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Yes</option>
+                                    </select>                                  
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+		</div> <!-- /content -->
+		<div data-role="footer" data-position="fixed" data-theme="a">		
+		<div data-role="navbar">
+                    <ul>
+			<li><a href="#principal" data-icon="back">Atras</a></li>
+			<li><a href="#principal" data-icon="home">Inicio</a></li>
+			<li><a href="#menu" data-icon="gear">Ajustes</a></li>
+                    </ul>
+		</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div> <!-- /page -->          
 </body>
 </html>
