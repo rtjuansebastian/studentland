@@ -3,6 +3,35 @@ $(document).on("ready",ini);
 function ini()
 {	
 	$("#btsubmit").on("click",consultarEstudiantes);
+        
+        $('#formulariologin').submit(function() { 
+	
+	 
+	// recolecta los valores que inserto el usuario
+	var datosUsuario = $("#nombredeusuario").val()
+	var datosPassword = $("#clave").val()
+	
+  	archivoValidacion = "http://gincomex.com/siacomex/studentland/login.php?jsoncallback=?"
+
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
+	.done(function(respuestaServer) {
+		
+		alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador)
+		
+		if(respuestaServer.validacion == "ok"){
+		  
+		 	/// si la validacion es correcta, muestra la pantalla "home"
+			$.mobile.changePage("#menu")
+		  
+		}else{
+		  $.mobile.changePage("#login")
+		  /// ejecutar una conducta cuando la validacion falla
+                  $("#respuestalogin").html("usuario incorrecto");
+		}
+  
+	})
+	return false;
+})
 }
 
 function consultarEstudiantes()
@@ -104,7 +133,7 @@ function traerDatosProgramas(i)
         });          
 }
 
-               	
+
 function slider1()
 {
     $('#slider div:gt(0)').hide();

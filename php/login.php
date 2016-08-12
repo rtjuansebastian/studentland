@@ -1,27 +1,27 @@
 <?php
+function authorize()
+{
+  //normally this info would be pulled from a database.
+  //build JSON array
+  $status = array("status" => "success"); 
  
-$server = "localhost";
-$username = "gincomex_admin";
-$password = "Arpas2015";
-$database = "gincomex_studentland";
+  return $status;
+}
  
-$con = mysql_connect($server, $username, $password) or die ("No se conecto: " . mysql_error());
+$possible_params = array("authorization", "test");
  
-mysql_select_db($database, $con);
+$value = "An error has occurred";
  
-$usu = mysql_real_escape_string($_POST["usu"]);
-$pass = mysql_real_escape_string($_POST["pass"]);
- 
-$sql = "SELECT nombre FROM usuarios WHERE nombre='$usu' AND contraseña='$pass'";
- 
-if ($resultado = mysql_query($sql, $con)){
-    if (mysql_num_rows($resultado) > 0){
-        echo true;
+if (isset($_POST["action"]) && in_array($_POST["action"], $possible_params))
+{
+  switch ($_POST["action"])
+    {
+      case "authorization":
+        $value = authorize();
+        break;
     }
 }
-else{
-    echo false;
-}
-mysql_close($con);
  
+//return JSON array
+exit(json_encode($value));
 ?>
