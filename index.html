@@ -12,8 +12,30 @@
 
 </head> 
  
-<body> 
-	<div data-role="page" id="principal"> 
+<body>
+    	<div data-role="page" id="menu"> 
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Estudiayapp</h1>
+		</div> 
+		<div role="main" class="ui-content">
+                    <div data-role="controlgroup">
+                        <a href="#buscarprograma" class="ui-btn ui-corner-all ui-icon-search ui-btn-icon-bottom">Buscar Carrera</a>
+                        <a href="#login" class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-bottom">Iniciar Sesion/Registrar</a>
+                        <a href="#test_vocacional" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-bottom">Test Vocacional</a>
+                        <a href="#" class="ui-btn ui-corner-all ui-icon-star ui-btn-icon-bottom">Ranking</a>
+                    </div>    
+		</div> <!-- /content -->
+		<div data-role="footer" data-position="fixed" data-theme="a">		
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#buscarprograma" data-icon="back">Atras</a></li>
+				<li><a href="#menu" data-icon="home">Inicio</a></li>
+				<li><a href="#menu" data-icon="gear">Ajustes</a></li>
+			</ul>
+		</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div> <!-- /page -->
+	<div data-role="page" id="buscarprograma"> 
 		<div data-role="header" data-position="fixed" data-theme="a">
 		<h1>Estudiayapp</h1>
 		</div> 
@@ -148,8 +170,8 @@
 		<div data-role="footer" data-position="fixed" data-theme="a">		
 			<div data-role="navbar">
 			<ul>
-				<li><a href="#" data-icon="back" >Atras</a></li>
-				<li><a href="#" data-icon="home">Inicio</a></li>
+				<li><a href="#menu" data-icon="back" >Atras</a></li>
+				<li><a href="#menu" data-icon="home">Inicio</a></li>
 				<li><a href="#menu" data-icon="gear">Ajustes</a></li>
 			</ul>
 			</div><!-- /navbar -->
@@ -163,7 +185,7 @@
 			<div class="ui-field-contain">
 				<div id="mostrarDatos">
 					<div id="total"></div>
-					<ul data-role="listview" data-theme="a" id="listaDatos" data-filter="true" data-filter-placeholder="Filtro de b�squeda">
+					<ul data-role="listview" data-theme="a" id="listaDatos" data-filter="true" data-filter-placeholder="Filtro de busqueda">
 					</ul>
 				</div>
 			</div>	
@@ -171,8 +193,8 @@
 		<div data-role="footer" data-position="fixed" data-theme="a">		
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#principal" data-icon="back">Atras</a></li>
-				<li><a href="#principal" data-icon="home">Inicio</a></li>
+				<li><a href="#buscarprograma" data-icon="back">Atras</a></li>
+				<li><a href="#menu" data-icon="home">Inicio</a></li>
 				<li><a href="#menu" data-icon="gear">Ajustes</a></li>
 			</ul>
 		</div><!-- /navbar -->
@@ -194,29 +216,7 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#mostrar" data-icon="back">Atras</a></li>
-				<li><a href="#principal" data-icon="home">Inicio</a></li>
-				<li><a href="#menu" data-icon="gear">Ajustes</a></li>
-			</ul>
-		</div><!-- /navbar -->
-		</div><!-- /footer -->
-	</div> <!-- /page -->
-	<div data-role="page" id="menu"> 
-		<div data-role="header" data-position="fixed" data-theme="a">
-			<h1>Estudiayapp</h1>
-		</div> 
-		<div role="main" class="ui-content">
-                    <div data-role="controlgroup">
-                        <a href="#principal" class="ui-btn ui-corner-all ui-icon-search ui-btn-icon-bottom">Buscar Carrera</a>
-                        <a href="#login" class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-bottom">Iniciar Sesion/Registrar</a>
-                        <a href="#test_vocacional" class="ui-btn ui-corner-all ui-icon-edit ui-btn-icon-bottom">Test Vocacional</a>
-                        <a href="#" class="ui-btn ui-corner-all ui-icon-star ui-btn-icon-bottom">Ranking</a>
-                    </div>    
-		</div> <!-- /content -->
-		<div data-role="footer" data-position="fixed" data-theme="a">		
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#principal" data-icon="back">Atras</a></li>
-				<li><a href="#principal" data-icon="home">Inicio</a></li>
+				<li><a href="#menu" data-icon="home">Inicio</a></li>
 				<li><a href="#menu" data-icon="gear">Ajustes</a></li>
 			</ul>
 		</div><!-- /navbar -->
@@ -227,17 +227,12 @@
 			<h1>Estudiayapp</h1>
 		</div> 
 		<div role="main" class="ui-content">
-                    <!--<form action="http://gincomex.com/siacomex/studentland/login.php" id="formulario" method="POST">-->
-                <form id="formulariologin" >
-      
+                <form id="formulariologin" >      
       			<label> Usuario </label>
-      			<input type="text" id="nombredeusuario" name="nombredeusuario">
-      
+      			<input type="text" id="nombredeusuario" name="nombredeusuario">      
       			<label> Password </label>
      			<input type="password" id="clave" name="clave" >
-
-      			<input type="submit" value="Login" id="botonLogin">
-      
+      			<input type="submit" value="Login" id="botonLogin">      
     		</form>
                     <div id="respuestalogin">
                         
@@ -246,8 +241,8 @@
 		<div data-role="footer" data-position="fixed" data-theme="a">		
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#principal" data-icon="back">Atras</a></li>
-				<li><a href="#principal" data-icon="home">Inicio</a></li>
+				<li><a href="#buscarprograma" data-icon="back">Atras</a></li>
+				<li><a href="#menu" data-icon="home">Inicio</a></li>
 				<li><a href="#menu" data-icon="gear">Ajustes</a></li>
 			</ul>
 		</div><!-- /navbar -->
@@ -269,102 +264,102 @@
                         <tbody>
                             <tr>
                                 <th>1</th>
-                                <td>¿Aceptarias trabajar escribiendo articulos en la seccion economica de un diario?</td>
+                                <td>Aceptarias trabajar escribiendo articulos en la seccion economica de un diario?</td>
                                 <td>
                                     <select name="slider1" id="slider-flip-m" data-role="slider" data-mini="true">
                                         <option value="no">No</option>
-                                        <option value="si" >Yes</option>
+                                        <option value="si" >Si</option>
                                     </select>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr> 
                                 <th>2</th>
-                                <td>¿Te ofrecerias para organizar la despedida de soltero de uno de tus amigos?</td>
+                                <td>Te ofrecerias para organizar la despedida de soltero de uno de tus amigos?</td>
                                 <td>
                                     <select name="slider2" id="slider-flip-m" data-role="slider" data-mini="true">
                                         <option value="no">No</option>
-                                        <option value="si" >Yes</option>
+                                        <option value="si" >Si</option>
                                     </select>                                 
                                 </td>
                             </tr>
                             <tr>
                                 <th>3</th>
-                                <td>¿Te gustaria dirigir un proyecto de urbanizacion en tu municipio?</td>
+                                <td>Te gustaria dirigir un proyecto de urbanizacion en tu municipio?</td>
                                 <td>
                                     <select name="slider3" id="slider-flip-m" data-role="slider" data-mini="true">
                                         <option value="no">No</option>
-                                        <option value="si" >Yes</option>
+                                        <option value="si" >Si</option>
                                     </select>                                   
                                 </td>
                             </tr>
                             <tr>
                                 <th>4</th>
-                                <td>¿A una frustracion siempre opones un pensamiento positivo?</td>
+                                <td>A una frustracion siempre opones un pensamiento positivo?</td>
                                 <td>
                                     <select name="slider4" id="slider-flip-m" data-role="slider" data-mini="true">
                                         <option value="no">No</option>
-                                        <option value="si" >Yes</option>
+                                        <option value="si" >Si</option>
                                     </select>                                     
                                 </td>
                             </tr>
                             <tr>
                                 <th>5</th>
-                                <td>¿Te dedicarias a socorrer a personas accidentadas o atacadas por asaltantes?</td>
+                                <td>Te dedicarias a socorrer a personas accidentadas o atacadas por asaltantes?</td>
                                 <td>
                                     <select name="slider5" id="slider-flip-m" data-role="slider" data-mini="true">
                                         <option value="no">No</option>
-                                        <option value="si" >Yes</option>
+                                        <option value="si" >Si</option>
                                     </select>                                      
                                 </td>
                             </tr>
                             <tr>
                                 <th>6</th>
-                                <td>¿Cuando eras chico, te interesaba saber como estaban construidos tus juguetes?</td>
+                                <td>Cuando eras chico, te interesaba saber como estaban construidos tus juguetes?</td>
                                 <td>
                                     <select name="slider6" id="slider-flip-m" data-role="slider" data-mini="true">
                                         <option value="no">No</option>
-                                        <option value="si" >Yes</option>
+                                        <option value="si" >Si</option>
                                     </select>                                     
                                 </td>
                             </tr>
                             <tr>
                                 <th>7</th>
-                                <td>¿Te interesan mas los misterios de la naturaleza que los secretos de la tecnologia?</td>
+                                <td>Te interesan mas los misterios de la naturaleza que los secretos de la tecnologia?</td>
                                 <td>
                                     <select name="slider7" id="slider-flip-m" data-role="slider" data-mini="true">
                                         <option value="no">No</option>
-                                        <option value="si" >Yes</option>
+                                        <option value="si" >Si</option>
                                     </select>                                     
                                 </td>
                             </tr>
                             <tr>
                                 <th>8</th>
-                                <td>¿Escuchas atentamente los problemas que te plantean tus amigos?</td>
+                                <td>Escuchas atentamente los problemas que te plantean tus amigos?</td>
                                 <td>
                                     <select name="slider8" id="slider-flip-m" data-role="slider" data-mini="true">
                                         <option value="no">No</option>
-                                        <option value="si" >Yes</option>
+                                        <option value="si" >Si</option>
                                     </select>                                      
                                 </td>
                             </tr>
                             <tr>
                                 <th>9</th>
-                                <td>¿Te ofrecerias para explicar a tus compañeros un determinado tema que ellos no
+                                <td>Te ofrecerias para explicar a tus compa�eros un determinado tema que ellos no
 entendieron?</td>
                                 <td>
                                     <select name="slider9" id="slider-flip-m" data-role="slider" data-mini="true">
                                         <option value="no">No</option>
-                                        <option value="si" >Yes</option>
+                                        <option value="si" >Si</option>
                                     </select>                                      
                                 </td>
                             </tr>
                             <tr>
                                 <th>10</th>
-                                <td>¿Eres exigente y critico con tu equipo de trabajo?</td>
+                                <td>Eres exigente y critico con tu equipo de trabajo?</td>
                                 <td>
                                     <select name="slider10" id="slider-flip-m" data-role="slider" data-mini="true">
                                         <option value="no">No</option>
-                                        <option value="si" >Yes</option>
+                                        <option value="si" >Si</option>
                                     </select>                                  
                                 </td>
                             </tr>
@@ -374,8 +369,8 @@ entendieron?</td>
 		<div data-role="footer" data-position="fixed" data-theme="a">		
 		<div data-role="navbar">
                     <ul>
-			<li><a href="#principal" data-icon="back">Atras</a></li>
-			<li><a href="#principal" data-icon="home">Inicio</a></li>
+			<li><a href="#buscarprograma" data-icon="back">Atras</a></li>
+			<li><a href="#menu" data-icon="home">Inicio</a></li>
 			<li><a href="#menu" data-icon="gear">Ajustes</a></li>
                     </ul>
 		</div><!-- /navbar -->

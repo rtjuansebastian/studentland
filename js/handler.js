@@ -21,7 +21,7 @@ function ini()
 		if(respuestaServer.validacion == "ok"){
 		  
 		 	/// si la validacion es correcta, muestra la pantalla "home"
-			$.mobile.changePage("#menu")
+			$.mobile.changePage("#buscarprograma")
 		  
 		}else{
 		  $.mobile.changePage("#login")
