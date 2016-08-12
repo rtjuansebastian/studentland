@@ -42,6 +42,7 @@
 		<div role="main" class="ui-content">
 		<!--<form action="php/consultar.php" id="formulario" method="POST">-->
 		<form action="http://gincomex.com/siacomex/studentland/consultar.php" id="formulario" method="POST">
+                    <div id="usuarioactivo"></div>
 			<div data-role="fieldcontain">
 			<label for="select_tipo_carrera" class="select">Tipo de carrera:</label>
 			<select name="select_tipo_carrera" id="select_tipo_carrera" data-theme="a">
@@ -253,6 +254,7 @@
 			<h1>Estudiayapp</h1>
 		</div> 
 		<div role="main" class="ui-content">
+                    <form name="formulariotest" method="post">
                     <table data-role="table" id="table-test-1" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" >
                         <thead>
                             <tr class="ui-bar-d">
@@ -363,8 +365,934 @@ entendieron?</td>
                                     </select>                                  
                                 </td>
                             </tr>
+                            <tr>
+                                <th>11</th>
+                                <td>Te atrae armar rompecabezas o puzzles?</td>
+                                <td>
+                                    <select name="slider11" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <th>12</th>
+                                <td>Puedes establecer la diferencia conceptual entre macroeconomía y
+microeconomía?</td>
+                                <td>
+                                    <select name="slider12" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>13</th>
+                                <td>Usar uniforme te hace sentir distinto, importante?</td>
+                                <td>
+                                    <select name="slider13" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>14</th>
+                                <td>Participarías como profesional en un espectáculo de acrobacia aérea?</td>
+                                <td>
+                                    <select name="slider14" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>15</th>
+                                <td>Organizas tu dinero de manera que te alcance hasta el próximo cobro?</td>
+                                <td>
+                                    <select name="slider15" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>16</th>
+                                <td>Convences fácilmente a otras personas sobre la validez de tus argumentos?</td>
+                                <td>
+                                    <select name="slider16" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>17</th>
+                                <td>Estás informado sobre los nuevos descubrimientos que se están realizando
+sobre la Teoría del Big-Bang?</td>
+                                <td>
+                                    <select name="slider17" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>18</th>
+                                <td>Ante una situación de emergencia actúas rápidamente?</td>
+                                <td>
+                                    <select name="slider18" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>19</th>
+                                <td>Cuando tienes que resolver un problema matemático, perseveras hasta
+encontrar la solución?</td>
+                                <td>
+                                    <select name="slider19" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>20</th>
+                                <td>Si te convocara tu club preferido para planificar, organizar y dirigir un campo
+de deportes, aceptarías?</td>
+                                <td>
+                                    <select name="slider20" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                  
+                                </td>
+                            </tr> 
+                            <tr>
+                                <th>21</th>
+                                <td>Eres el que pone un toque de alegría en las fiestas?</td>
+                                <td>
+                                    <select name="slider21" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <th>22</th>
+                                <td>Crees que los detalles son tan importantes como el todo?</td>
+                                <td>
+                                    <select name="slider22" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>23</th>
+                                <td>Te sentirías a gusto trabajando en un ámbito hospitalario?</td>
+                                <td>
+                                    <select name="slider23" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>24</th>
+                                <td>Te gustaría participar para mantener el orden ante grandes desórdenes y
+cataclismos?</td>
+                                <td>
+                                    <select name="slider24" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>25</th>
+                                <td>Pasarías varias horas leyendo algún libro de tu interés?</td>
+                                <td>
+                                    <select name="slider25" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>26</th>
+                                <td>Planificas detalladamente tus trabajos antes de empezar?</td>
+                                <td>
+                                    <select name="slider26" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>27</th>
+                                <td>Entablas una relación casi personal con tu computadora?</td>
+                                <td>
+                                    <select name="slider27" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>28</th>
+                                <td>Disfrutas modelando con arcilla?</td>
+                                <td>
+                                    <select name="slider28" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>29</th>
+                                <td>Ayudas habitualmente a los no videntes a cruzar la calle?</td>
+                                <td>
+                                    <select name="slider29" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>30</th>
+                                <td>Consideras importante que desde la escuela primaria se fomente la actitud
+crítica y la participación activa?</td>
+                                <td>
+                                    <select name="slider30" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                  
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>31</th>
+                                <td>Aceptarías que las mujeres formaran parte de las fuerzas armadas bajo las
+mismas normas que los hombres?</td>
+                                <td>
+                                    <select name="slider31" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <th>32</th>
+                                <td>Te gustaría crear nuevas técnicas para descubrir las patologías de algunas
+enfermedades a través del microscopio?</td>
+                                <td>
+                                    <select name="slider32" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>33</th>
+                                <td>Participarías en una campaña de prevención contra la enfermedad de Chagas?</td>
+                                <td>
+                                    <select name="slider33" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>34</th>
+                                <td>Te interesan los temas relacionados al pasado y a la evolución del hombre?</td>
+                                <td>
+                                    <select name="slider34" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>35</th>
+                                <td>Te incluirías en un proyecto de investigación de los movimientos sísmicos y sus
+consecuencias?</td>
+                                <td>
+                                    <select name="slider35" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>36</th>
+                                <td>Fuera de los horarios escolares, dedicas algún día de la semana a la realización
+de actividades corporales?</td>
+                                <td>
+                                    <select name="slider36" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>37</th>
+                                <td>Te interesan las actividades de mucha acción y de reacción rápida en
+situaciones imprevistas y de peligro?</td>
+                                <td>
+                                    <select name="slider37" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>38</th>
+                                <td>Te ofrecerías para colaborar como voluntario en los gabinetes espaciales de la
+NASA?</td>
+                                <td>
+                                    <select name="slider38" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>39</th>
+                                <td>Te gusta más el trabajo manual que el trabajo intelectual?</td>
+                                <td>
+                                    <select name="slider39" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>40</th>
+                                <td>Estarías dispuesto a renunciar a un momento placentero para ofrecer tu
+servicio como profesional?</td>
+                                <td>
+                                    <select name="slider40" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                  
+                                </td>
+                            </tr> 
+                            <tr>
+                                <th>41</th>
+                                <td>Participarías de una investigación sobre la violencia en el fútbol?</td>
+                                <td>
+                                    <select name="slider41" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <th>42</th>
+                                <td>Te gustaría trabajar en un laboratorio mientras estudias?</td>
+                                <td>
+                                    <select name="slider42" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>43</th>
+                                <td>Arriesgarías tu vida para salvar la vida de otro que no conoces?</td>
+                                <td>
+                                    <select name="slider43" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>44</th>
+                                <td>Te agradaría hacer un curso de primeros auxilios?</td>
+                                <td>
+                                    <select name="slider44" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>45</th>
+                                <td>Tolerarías empezar tantas veces como fuere necesario hasta obtener el logro
+deseado?</td>
+                                <td>
+                                    <select name="slider45" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>46</th>
+                                <td>Distribuyes tus horarios del día adecuadamente para poder hacer todo lo
+planeado?</td>
+                                <td>
+                                    <select name="slider46" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>47</th>
+                                <td>Harías un curso para aprender a fabricar los instrumentos y/o piezas de las
+máquinas o aparatos con que trabajas?</td>
+                                <td>
+                                    <select name="slider47" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>48</th>
+                                <td>Elegirías una profesión en la tuvieras que estar algunos meses alejado de tu
+familia, por ejemplo el marino?</td>
+                                <td>
+                                    <select name="slider48" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>49</th>
+                                <td>Te radicarías en una zona agrícola-ganadera para desarrollar tus actividades
+como profesional?</td>
+                                <td>
+                                    <select name="slider49" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>50</th>
+                                <td>Cuando estás en un grupo trabajando, te entusiasma producir ideas originales
+y que sean tenidas en cuenta?</td>
+                                <td>
+                                    <select name="slider50" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                  
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>51</th>
+                                <td>Te resulta fácil coordinar un grupo de trabajo?</td>
+                                <td>
+                                    <select name="slider51" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <th>52</th>
+                                <td>Te resultó interesante el estudio de las ciencias biológicas?</td>
+                                <td>
+                                    <select name="slider52" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>53</th>
+                                <td>Si una gran empresa solicita un profesional como gerente de comercialización,
+te sentirías a gusto desempeñando ese rol?</td>
+                                <td>
+                                    <select name="slider53" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>54</th>
+                                <td>Te incluirías en un proyecto nacional de desarrollo de la principal fuente de
+recursos de tu provincia?</td>
+                                <td>
+                                    <select name="slider54" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>55</th>
+                                <td>Tienes interés por saber cuáles son las causas que determinan ciertos
+fenómenos, aunque saberlo no altere tu vida?</td>
+                                <td>
+                                    <select name="slider55" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>56</th>
+                                <td>Descubriste algún filósofo o escritor que haya expresado tus mismas ideas con
+antelación?</td>
+                                <td>
+                                    <select name="slider56" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>57</th>
+                                <td>Desearías que te regalen algún instrumento musical para tu cumpleaños?</td>
+                                <td>
+                                    <select name="slider57" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>58</th>
+                                <td>Aceptarías colaborar con el cumplimiento de las normas en lugares públicos?</td>
+                                <td>
+                                    <select name="slider58" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>59</th>
+                                <td>Crees que tus ideas son importantes, y haces todo lo posible para ponerlas en
+práctica?</td>
+                                <td>
+                                    <select name="slider59" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>60</th>
+                                <td>Cuando se descompone un artefacto en tu casa, te dispones prontamente a
+repararlo?</td>
+                                <td>
+                                    <select name="slider60" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                  
+                                </td>
+                            </tr> 
+                            <tr>
+                                <th>61</th>
+                                <td>Formarías parte de un equipo de trabajo orientado a la preservación de la flora
+y la fauna en extinción?</td>
+                                <td>
+                                    <select name="slider61" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <th>62</th>
+                                <td>Acostumbras a leer revistas relacionadas con los últimos avances científicos y
+tecnológicos en el área de la salud?</td>
+                                <td>
+                                    <select name="slider62" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>63</th>
+                                <td>Preservar las raíces culturales de nuestro país, te parece importante y
+necesario?</td>
+                                <td>
+                                    <select name="slider63" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>64</th>
+                                <td>Te gustaría realizar una investigación que contribuyera a hacer más justa la
+distribución de la riqueza?</td>
+                                <td>
+                                    <select name="slider64" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>65</th>
+                                <td>Te gustaría realizar tareas auxiliares en una nave, como por ejemplo izado y
+arriado de velas, pintura y conservación del casco, arreglo de averías, conservación
+de motores, etc.?</td>
+                                <td>
+                                    <select name="slider65" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>66</th>
+                                <td>Crees que un país debe poseer la más alta tecnología armamentista, a
+cualquier precio?</td>
+                                <td>
+                                    <select name="slider66" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>67</th>
+                                <td>La libertad y la justicia son valores fundamentales en tu vida?</td>
+                                <td>
+                                    <select name="slider67" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>68</th>
+                                <td>Aceptarías hacer una práctica rentada en una industria de productos
+alimenticios en el sector de control de calidad?</td>
+                                <td>
+                                    <select name="slider68" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>69</th>
+                                <td>Consideras que la salud pública debe ser prioritaria, gratuita y eficiente para
+todos?</td>
+                                <td>
+                                    <select name="slider69" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>70</th>
+                                <td>Te interesaría investigar sobre alguna nueva vacuna?</td>
+                                <td>
+                                    <select name="slider70" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                  
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>71</th>
+                                <td>En un equipo de trabajo, preferís el rol de coordinador?</td>
+                                <td>
+                                    <select name="slider71" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <th>72</th>
+                                <td>En una discusión entre amigos, te ofreces como mediador?</td>
+                                <td>
+                                    <select name="slider72" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>73</th>
+                                <td>Estás de acuerdo con la formación de un cuerpo de soldados profesionales?</td>
+                                <td>
+                                    <select name="slider73" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>74</th>
+                                <td>Lucharías por una causa justa hasta las últimas consecuencias?</td>
+                                <td>
+                                    <select name="slider74" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>75</th>
+                                <td>Te gustaría investigar científicamente sobre cultivos agrícolas?</td>
+                                <td>
+                                    <select name="slider75" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>76</th>
+                                <td>Harías un nuevo diseño de una prenda pasada de moda, ante una reunión
+imprevista?</td>
+                                <td>
+                                    <select name="slider76" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>77</th>
+                                <td>Visitarías un observatorio astronómico para conocer en acción el
+funcionamiento de los aparatos?</td>
+                                <td>
+                                    <select name="slider77" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>78</th>
+                                <td>Dirigirías el área de importación y exportación de una empresa?</td>
+                                <td>
+                                    <select name="slider78" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>79</th>
+                                <td>Te inhibís al entrar a un lugar nuevo con gente desconocida?</td>
+                                <td>
+                                    <select name="slider79" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>80</th>
+                                <td>Te gratificaría el trabajar con niños?</td>
+                                <td>
+                                    <select name="slider80" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                  
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>81</th>
+                                <td>Harías el diseño de un afiche para una campaña contra el sida?</td>
+                                <td>
+                                    <select name="slider81" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                  
+                                </td>
+                            </tr> 
+                            <tr> 
+                                <th>82</th>
+                                <td>Dirigirías un grupo de teatro independiente?</td>
+                                <td>
+                                    <select name="slider82" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>83</th>
+                                <td>Enviarías tu currículum a una empresa automotriz que solicita gerente para su
+área de producción?</td>
+                                <td>
+                                    <select name="slider83" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>84</th>
+                                <td>Participarías en un grupo de defensa internacional dentro de alguna fuerza
+armada?</td>
+                                <td>
+                                    <select name="slider84" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>85</th>
+                                <td>Te costearías tus estudios trabajando en una auditoría?</td>
+                                <td>
+                                    <select name="slider85" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>86</th>
+                                <td>Eres de los que defiendes causas perdidas?</td>
+                                <td>
+                                    <select name="slider86" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>87</th>
+                                <td>Ante una emergencia epidémica participarías en una campaña brindando tu
+ayuda?</td>
+                                <td>
+                                    <select name="slider87" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>88</th>
+                                <td>Sabrías responder que significa ADN y ARN?</td>
+                                <td>
+                                    <select name="slider88" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>89</th>
+                                <td>Elegirías una carrera cuyo instrumento de trabajo fuere la utilización de un
+idioma extranjero?</td>
+                                <td>
+                                    <select name="slider89" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>90</th>
+                                <td>Trabajar con objetos te resulta más gratificante que trabajar con personas?</td>
+                                <td>
+                                    <select name="slider90" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                  
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>91</th>
+                                <td>Te resultaría gratificante ser asesor contable en una empresa reconocida?</td>
+                                <td>
+                                    <select name="slider91" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <th>92</th>
+                                <td>Ante un llamado solidario, te ofrecerías para cuidar a un enfermo?</td>
+                                <td>
+                                    <select name="slider92" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>93</th>
+                                <td>Te atrae investigar sobre los misterios del universo, por ejemplo los agujeros
+negros?</td>
+                                <td>
+                                    <select name="slider93" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>94</th>
+                                <td>El trabajo individual te resulta más rápido y efectivo que el trabajo grupal?</td>
+                                <td>
+                                    <select name="slider94" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>95</th>
+                                <td>Dedicarías parte de tu tiempo a ayudar a personas de zonas carenciadas?</td>
+                                <td>
+                                    <select name="slider95" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>96</th>
+                                <td>Cuando elegís tu ropa o decoras un ambiente, tienes en cuenta la combinación
+de los colores, las telas o el estilo de los muebles?</td>
+                                <td>
+                                    <select name="slider96" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>97</th>
+                                <td>Te gustaría trabajar como profesional dirigiendo la construcción de una
+empresa hidroeléctrica?</td>
+                                <td>
+                                    <select name="slider97" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>98</th>
+                                <td>Sabes qué es el PIB?</td>
+                                <td>
+                                    <select name="slider98" id="slider-flip-m" data-role="slider" data-mini="true">
+                                        <option value="no">No</option>
+                                        <option value="si" >Si</option>
+                                    </select>                                      
+                                </td>
+                            </tr>                            
                         </tbody>
                     </table>
+                    <label for="submittest">Terminar Test:</label>
+                    <button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submittest">Enviar</button>
+                    </form>
 		</div> <!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="a">		
 		<div data-role="navbar">

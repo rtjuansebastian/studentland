@@ -22,7 +22,7 @@ function ini()
 		  
 		 	/// si la validacion es correcta, muestra la pantalla "home"
 			$.mobile.changePage("#buscarprograma")
-		  
+                        $("#usuarioactivo").html("Bienvenido "+datosUsuario);
 		}else{
 		  $.mobile.changePage("#login")
 		  /// ejecutar una conducta cuando la validacion falla
@@ -32,7 +32,17 @@ function ini()
 	})
 	return false;
 })
-}
+
+        $('#formulariotest').submit(function() { 
+            var str = $("formulariotest").serialize()
+            archivoValidacion = "http://gincomex.com/siacomex/studentland/chaside.php?jsoncallback=?"
+
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
+	.done(function(respuestaServer) {
+            $.mobile.changePage("#resultadotest")
+            $("#areaconocimiento").html("Bienvenido "+respuestaServer.area);
+        })
+        })
 
 function consultarEstudiantes()
 {
