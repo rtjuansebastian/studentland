@@ -4,6 +4,7 @@ function ini()
 {	
     $("#btsubmit").on("click",consultarEstudiantes);   
     $("#botonLogin").on("click",login);
+    $("#submittest").on("click",vocacional);
 }
 
 function consultarEstudiantes()
@@ -108,43 +109,70 @@ function traerDatosProgramas(i)
 }
 
                	
-function slider1()
-{
-    $('#slider div:gt(0)').hide();
-    setInterval(function(){
-    $('#slider div:first-child').fadeOut(5000)
-    .next('div').fadeIn(5000)
-    .end().appendTo('#slider');}, 6000);
-}
+    function slider1()
+    {
+        $('#slider div:gt(0)').hide();
+        setInterval(function(){
+        $('#slider div:first-child').fadeOut(5000)
+        .next('div').fadeIn(5000)
+        .end().appendTo('#slider');}, 6000);
+    }
 
-function login() { 
- 
-    // recolecta los valores que inserto el usuario
-    var datosUsuario = $("#nombredeusuario").val();
-    var datosPassword = $("#clave").val();
+    function login() 
+    { 
 
-    archivoValidacion = "http://gincomex.com/siacomex/studentland/login.php?jsoncallback=?";
+        // recolecta los valores que inserto el usuario
+        var datosUsuario = $("#nombredeusuario").val();
+        var datosPassword = $("#clave").val();
 
-    $.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
-    .done(function(respuestaServer) 
-        {
-	
-            alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador);
+        archivoValidacion = "http://gincomex.com/siacomex/studentland/login.php?jsoncallback=?";
 
-            if(respuestaServer.validacion == "ok")
-            {		  
-                /// si la validacion es correcta, muestra la pantalla "home"
-                $.mobile.changePage("#buscarprograma");
-                $("#usuarioactivo").html("Bienvenido "+datosUsuario);
-            }
-
-            else
+        $.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
+        .done(function(respuestaServer) 
             {
-                $.mobile.changePage("#login");
-                /// ejecutar una conducta cuando la validacion falla
-                $("#respuestalogin").html("usuario incorrecto");
+
+                alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador);
+
+                if(respuestaServer.validacion == "ok")
+                {		  
+                    /// si la validacion es correcta, muestra la pantalla "home"
+                    $.mobile.changePage("#buscarprograma");
+                    $("#usuarioactivo").html("Bienvenido "+datosUsuario);
+                }
+
+                else
+                {
+                    $.mobile.changePage("#login");
+                    /// ejecutar una conducta cuando la validacion falla
+                    $("#respuestalogin").html("usuario incorrecto");
+                }
+
+            });
+        return false;
+    }
+
+    function vocacional()
+    {
+        //var datosUsuario = $("#nombredeusuario").val();
+        //var str = $("formulariotest").serialize();
+            var datos;
+                archivoValidacion2 = "http://gincomex.com/siacomex/studentland/chaside.php?jsoncallback=?";
+            for(i=0;i<=98;i++)
+            {
+                datos[]=$("#slider"+i+"").val();
             }
-  
-	});
-    return false;
-}
+            //$.getJSON( archivoValidacion2, { datos:str, usuario:datosUsuario})
+            $.getJSON( archivoValidacion2, { datos:datos})
+            .done(function(respuestaServer) {
+                $.mobile.changePage("#resultadotest");
+                var lista = "";
+                    $.each( respuestaServer, function( key, value ) {
+                        lista += "<li>";
+                        lista += "Nombre del programa: " + value.Universidad + "<br><br>";
+                        lista += "Universidad: " + value.Programa + "<br><br>";
+                        lista += "</li>";
+                    });
+                    $("#areaconocimiento").html(lista);
+                    $("#areaconocimiento").listview().listview('refresh');
+            });
+    }  
