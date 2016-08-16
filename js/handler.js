@@ -2,53 +2,17 @@ $(document).on("ready",ini);
 
 function ini()
 {	
-	$("#btsubmit").on("click",consultarEstudiantes);
-        
-        $('#formulariologin').submit(function() { 
-	
-	 
-	// recolecta los valores que inserto el usuario
-	var datosUsuario = $("#nombredeusuario").val()
-	var datosPassword = $("#clave").val()
-	
-  	archivoValidacion = "http://gincomex.com/siacomex/studentland/login.php?jsoncallback=?"
-
-	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
-	.done(function(respuestaServer) {
-		
-		alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador)
-		
-		if(respuestaServer.validacion == "ok"){
-		  
-		 	/// si la validacion es correcta, muestra la pantalla "home"
-			$.mobile.changePage("#buscarprograma")
-                        $("#usuarioactivo").html("Bienvenido "+datosUsuario);
-		}else{
-		  $.mobile.changePage("#login")
-		  /// ejecutar una conducta cuando la validacion falla
-                  $("#respuestalogin").html("usuario incorrecto");
-		}
-  
-	})
-	return false;
-})
-
-        $('#formulariotest').submit(function() { 
-            var str = $("formulariotest").serialize()
-            archivoValidacion = "http://gincomex.com/siacomex/studentland/chaside.php?jsoncallback=?"
-
-	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
-	.done(function(respuestaServer) {
-            $.mobile.changePage("#resultadotest")
-            $("#areaconocimiento").html("Bienvenido "+respuestaServer.area);
-        })
-        })
+    $("#btsubmit").on("click",consultarEstudiantes);   
+    $("#botonLogin").on("click",login);
+}
 
 function consultarEstudiantes()
 {
-	cc = $("#select_programa").val();
-	ca = $("#select_ciudad").val();
-	traerDatos();
+    institucion = $("#select_tipo_institucion").val();
+    carrera = $("#select_tipo_carrera").val();
+    programa = $("#select_programa").val();
+    ciudad= $("#select_ciudad").val();
+    traerDatos();
 }
 
 function traerDatos()
@@ -64,7 +28,7 @@ function traerDatos()
 		async: false,
         type: "POST",
         url: $("#formulario").attr('action'),
-        data: $("#formulario").serialize(),
+        data: {select_tipo_institucion: institucion, select_tipo_carrera: carrera, select_programa: programa, select_ciudad: ciudad},
     }
     ).done(function (resultado) 
     	{
@@ -86,7 +50,7 @@ function traerDatos()
 	                lista += value.programa + "<br>";
 	                lista += value.universidad + "<br>";
 	                lista += value.ciudad + "<br>";
-	                lista += "<form action='http://gincomex.com/siacomex/studentland/consultarPrograma.php' method='POST' id='formulario" + i +"'>";                        
+	                lista += "<form action='php/consultarPrograma.php' method='POST' id='formulario" + i +"'>";                        
 	                lista += "<input type='hidden' name='codigo' id='codigo' value=" + value.codigo + ">";
 	                lista += "<a href='#resultado' onclick=\"traerDatosProgramas("+i+")\"> Ver mas";
 	                //lista += "<input type='button' value='ver mas' name='ver_mas' id='ver_mas' data-role='button' data-mini='true' data-icon='plus' data-iconpos='notext' onclick=\"traerDatosProgramas("+i+")\">";
@@ -143,7 +107,7 @@ function traerDatosProgramas(i)
         });          
 }
 
-
+               	
 function slider1()
 {
     $('#slider div:gt(0)').hide();
@@ -151,4 +115,36 @@ function slider1()
     $('#slider div:first-child').fadeOut(5000)
     .next('div').fadeIn(5000)
     .end().appendTo('#slider');}, 6000);
-}	
+}
+
+function login() { 
+ 
+    // recolecta los valores que inserto el usuario
+    var datosUsuario = $("#nombredeusuario").val();
+    var datosPassword = $("#clave").val();
+
+    archivoValidacion = "http://gincomex.com/siacomex/studentland/login.php?jsoncallback=?";
+
+    $.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
+    .done(function(respuestaServer) 
+        {
+	
+            alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador);
+
+            if(respuestaServer.validacion == "ok")
+            {		  
+                /// si la validacion es correcta, muestra la pantalla "home"
+                $.mobile.changePage("#buscarprograma");
+                $("#usuarioactivo").html("Bienvenido "+datosUsuario);
+            }
+
+            else
+            {
+                $.mobile.changePage("#login");
+                /// ejecutar una conducta cuando la validacion falla
+                $("#respuestalogin").html("usuario incorrecto");
+            }
+  
+	});
+    return false;
+}
