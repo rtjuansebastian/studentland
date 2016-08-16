@@ -153,26 +153,25 @@ function traerDatosProgramas(i)
 
     function vocacional()
     {
-        //var datosUsuario = $("#nombredeusuario").val();
-        //var str = $("formulariotest").serialize();
-            var datos;
-                archivoValidacion2 = "http://gincomex.com/siacomex/studentland/chaside.php?jsoncallback=?";
-            for(i=0;i<=98;i++)
-            {
-                datos[]=$("#slider"+i+"").val();
-            }
-            //$.getJSON( archivoValidacion2, { datos:str, usuario:datosUsuario})
-            $.getJSON( archivoValidacion2, { datos:datos})
-            .done(function(respuestaServer) {
-                $.mobile.changePage("#resultadotest");
-                var lista = "";
-                    $.each( respuestaServer, function( key, value ) {
-                        lista += "<li>";
-                        lista += "Nombre del programa: " + value.Universidad + "<br><br>";
-                        lista += "Universidad: " + value.Programa + "<br><br>";
-                        lista += "</li>";
-                    });
-                    $("#areaconocimiento").html(lista);
-                    $("#areaconocimiento").listview().listview('refresh');
+        $.ajax(
+        {
+            global: false,
+            dataType: "html",
+            async: false,
+            type: "POST",
+            url: $("#formulariotest").attr('action'),
+            data: $("#formulariotest").serialize()
+        }).done(function (resultado) 
+        {
+            var datosRecibidos = JSON.parse(resultado);
+            var lista = "";
+            $.each( datosRecibidos, function( key, value ) {
+            lista += "<li>";
+            lista += "Nombre del programa: " + value.Programa + "<br><br>";
+            lista += "Universidad: " + value.Universidad + "<br><br>";
+            lista += "</li>";
             });
+            $("#areaconocimiento").html(lista);
+            $("#areaconocimiento").listview().listview('refresh');
+        });          
     }  

@@ -1,12 +1,12 @@
 <?php
-
+header('Content-Type: text/html; charset=ISO-8859-1'); 
 $conexion = mysqli_connect("localhost","gincomex_admin","Arpas2015") OR die ("No se pudo conectar al servidor");
 mysqli_select_db ($conexion,"gincomex_studentland") OR die ("No se puede conectar a studentland");
 
-$c=0;$h=0;$a=0;$s=0;$i=0;$d=0;$e=0;$mayor="";
-if(isset($_GET))
+$c=0;$h=0;$a=0;$s=0;$i=0;$d=0;$e=0;$mayor="";$area=0;
+if(isset($_POST))
 {
-   foreach($_GET as $clave=>$valor)
+   foreach($_POST as $clave=>$valor)
    {
        if($valor>0)
        {
@@ -40,7 +40,7 @@ if(isset($_GET))
            }                      
        }
    }
-   //$usuario=$_GET['usuario'];
+   //$usuario=$_POST['usuario'];
    $sql='INSERT INTO test_vocacional (c,h,a,s,i,d,e) VALUES('.$c.','.$h.','.$a.','.$s.','.$i.','.$d.','.$e.');';
    $datos=mysqli_query($conexion,$sql);
    $chaside=array("C"=>$c, "H"=>$h,"A"=>$a, "S"=>$s, "I"=>$i, "D"=>$d, "E"=>$e);
@@ -108,7 +108,6 @@ if(isset($_GET))
       $arrDatos[] = array_map('utf8_encode', $rs);
     }
 
-    $datosjson= json_encode($arrDatos);
-    echo $_GET['jsoncallback'] . '(' . $datosjson . ');';
+    echo json_encode($arrDatos);
     }
 ?>

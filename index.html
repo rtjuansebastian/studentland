@@ -257,7 +257,7 @@
 			<h1>Estudiayapp</h1>
 		</div> 
 		<div role="main" class="ui-content">
-                    <form name="formulariotest" method="get">
+                    <form id="formulariotest" method="post" action="http://gincomex.com/siacomex/studentland/chaside.php">
                     <table data-role="table" id="table-test-1" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" >
                         <thead>
                             <tr class="ui-bar-d">
@@ -1294,7 +1294,8 @@ empresa hidroel�ctrica?</td>
                         </tbody>
                     </table>
                     <label for="submittest">Terminar Test:</label>
-                    <button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submittest">Enviar</button>
+                    <!--<button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submittest">Enviar</button>-->
+                    <input type="button" data-theme="a" name="submit" id="submittest" value="Enviar" onclick="location.href='#resultadotest'">
                     </form>
 		</div> <!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="a">		
