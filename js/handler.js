@@ -51,7 +51,7 @@ function traerDatos()
 	                lista += value.programa + "<br>";
 	                lista += value.universidad + "<br>";
 	                lista += value.ciudad + "<br>";
-	                lista += "<form action='php/consultarPrograma.php' method='POST' id='formulario" + i +"'>";                        
+	                lista += "<form action='http://gincomex.com/siacomex/studentland/consultarPrograma.php' method='POST' id='formulario" + i +"'>";                        
 	                lista += "<input type='hidden' name='codigo' id='codigo' value=" + value.codigo + ">";
 	                lista += "<a href='#resultado' onclick=\"traerDatosProgramas("+i+")\"> Ver mas";
 	                //lista += "<input type='button' value='ver mas' name='ver_mas' id='ver_mas' data-role='button' data-mini='true' data-icon='plus' data-iconpos='notext' onclick=\"traerDatosProgramas("+i+")\">";
