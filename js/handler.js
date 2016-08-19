@@ -87,9 +87,9 @@ function traerDatosProgramas(i)
 				var lista = "";
                 $.each( datosRecibidos, function( key, value ) {
                 	lista += "<div id=\"slider\">";
-                	lista += "<div><img src=\"images/sedes/"+value.slider+"1.jpg\" alt=\"\"></div>";
-                	lista += "<div><img src=\"images/sedes/"+value.slider+"2.jpg\" alt=\"\"></div>";
-                	lista += "<div><img src=\"images/sedes/"+value.slider+"3.jpg\" alt=\"\"></div>";
+                	lista += "<div><img src=\"http://estudia.gincomex.com/images/sedes/"+value.slider+"1.jpg\" alt=\"\"></div>";
+                	lista += "<div><img src=\"http://estudia.gincomex.com/images/sedes/"+value.slider+"2.jpg\" alt=\"\"></div>";
+                	lista += "<div><img src=\"http://estudia.gincomex.com/images/sedes/"+value.slider+"3.jpg\" alt=\"\"></div>";
                 	lista += "</div>";
                 	lista += "<li>";
                     lista += "Nombre del programa: " + value.programa + "<br><br>";
