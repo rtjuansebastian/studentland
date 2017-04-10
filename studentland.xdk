@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.webapp",
       "src": "",
       "projectGuid": "27681910-0f46-4e62-91ad-d3d3f4f79bc6",
-      "lastModifiedDate": 1469833024226,
+      "lastModifiedDate": 1491834005080,
       "creationDate": 1459540088590
     },
     "sourceDirectory": "",
@@ -15,7 +15,9 @@
     "gameMetadata": {},
     "testDirectory": "test",
     "startFile": "index.html",
-    "projectTags": [],
+    "projectTags": [
+      "XDK-disallow-legacy-whitelist"
+    ],
     "projectFiles": {
       "xdk-publish-meta-data.json": {
         "settings": {
@@ -49,6 +51,7 @@
           "android-signed": true
         },
         "isActive_": true,
+        "certificateId_": "4zPTGl0SV0Wtt1PgN1-EQg2",
         "appName_": "studentland",
         "appID_": "not.yet.specified",
         "appAccess_": {
@@ -63,7 +66,6 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "certificateId_": "4zPTGl0SV0Wtt1PgN1-EQg2",
         "appVersion_": "0.0.1",
         "appVersionCode_": "1",
         "crosswalkVersion_": "16",
@@ -79,6 +81,7 @@
           "ios-configuration": "adhoc"
         },
         "isActive_": true,
+        "certificateId_": "",
         "appName_": "studentland",
         "appID_": "not.yet.specified",
         "appAccess_": {
@@ -93,7 +96,6 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "certificateId_": "",
         "appVersion_": "0.0.1",
         "cordovaCLIVersion_": "5.4.1",
         "iosProvs_": [],
@@ -105,6 +107,7 @@
         "name_": "Windows8",
         "preferences_": {},
         "isActive_": true,
+        "certificateId_": "",
         "appName_": "studentland",
         "appID_": "not.yet.specified",
         "appAccess_": {
@@ -119,7 +122,6 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "certificateId_": "",
         "appVersion_": "0.0.0.1",
         "cordovaCLIVersion_": "5.4.1"
       },
@@ -129,6 +131,7 @@
         "name_": "WebApp",
         "preferences_": {},
         "isActive_": false,
+        "certificateId_": "",
         "appName_": "studentland",
         "appID_": "not.yet.specified",
         "appAccess_": {
@@ -143,7 +146,6 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "certificateId_": "",
         "appVersion_": "0.0.1"
       },
       "Firefox": {
@@ -152,6 +154,7 @@
         "name_": "Firefox",
         "preferences_": {},
         "isActive_": true,
+        "certificateId_": "",
         "appName_": "studentland",
         "appID_": "not.yet.specified",
         "appAccess_": {
@@ -166,7 +169,6 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "certificateId_": "",
         "appVersion_": "0.0.1"
       },
       "Chrome": {
@@ -175,6 +177,7 @@
         "name_": "Chrome",
         "preferences_": {},
         "isActive_": false,
+        "certificateId_": "",
         "appName_": "studentland",
         "appID_": "not.yet.specified",
         "appAccess_": {
@@ -189,7 +192,6 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "certificateId_": "",
         "appVersion_": "0.0.1"
       },
       "Facebook": {
@@ -198,6 +200,7 @@
         "name_": "Facebook",
         "preferences_": {},
         "isActive_": true,
+        "certificateId_": "",
         "appName_": "studentland",
         "appID_": "not.yet.specified",
         "appAccess_": {
@@ -212,7 +215,6 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "certificateId_": "",
         "appVersion_": "0.0.1"
       },
       "WP81": {
@@ -221,6 +223,7 @@
         "name_": "WP81",
         "preferences_": {},
         "isActive_": true,
+        "certificateId_": "",
         "appName_": "studentland",
         "appID_": "not.yet.specified",
         "appAccess_": {
@@ -235,7 +238,6 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "certificateId_": "",
         "appVersion_": "0.0.0.1",
         "cordovaCLIVersion_": "5.4.1"
       }
